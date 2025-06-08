@@ -1,0 +1,82 @@
+/* ============================================= */
+/* ==  STYLES FOR PAGE NAVIGATION BUTTONS       == */
+/* ==  By Hasindu Ohasa                       == */
+/* ============================================= */
+
+/* --- Variables to match your homepage's theme --- */
+:root {
+    --primary-color: #2980b9; /* The professional blue */
+    --dark-color: #2c3e50;    /* The dark slate blue */
+    --card-background: #ffffff;
+    --light-text-color: #ffffff;
+}
+
+/* --- The container for the buttons --- */
+.page-navigation {
+    display: flex;
+    justify-content: space-between; /* Pushes buttons to opposite ends */
+    align-items: center;
+    flex-wrap: wrap; /* Allows buttons to stack on small screens */
+    gap: 20px; /* Adds space between buttons if they wrap */
+    max-width: 800px; /* Keeps it neat on very wide screens */
+    margin: 60px auto 40px auto; /* Centers the container and adds space */
+    padding: 20px;
+    border-top: 1px solid #e0e0e0; /* A subtle separator line */
+}
+
+/* --- Base style for both buttons --- */
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 12px 25px;
+    font-family: 'Poppins', sans-serif; /* Use the same modern font */
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped buttons */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* --- Style for the "Home" button (outline style) --- */
+.nav-button.home {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
+}
+
+.nav-button.home:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(41, 128, 185, 0.2);
+}
+
+/* --- Style for the "Next Page" button (filled style) --- */
+.nav-button.next {
+    color: var(--light-text-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-button.next:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+}
+
+/* --- Responsive adjustments for smaller screens --- */
+@media (max-width: 600px) {
+    .page-navigation {
+        justify-content: center; /* Center the buttons when they stack */
+    }
+
+    .nav-button {
+        width: 100%; /* Make buttons full-width */
+        justify-content: center; /* Center text/icon inside the button */
+        padding: 15px 20px;
+    }
+}
