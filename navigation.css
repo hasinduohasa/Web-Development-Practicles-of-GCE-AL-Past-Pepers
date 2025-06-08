@@ -1,6 +1,6 @@
 /* ============================================= */
-/* ==  STYLES FOR PAGE NAVIGATION BUTTONS       == */
-/* ==  By Hasindu Ohasa                       == */
+/* ==  STYLES FOR ANSWER PAGES                  == */
+/* ==  By Hasindu Ohasa                         == */
 /* ============================================= */
 
 /* --- Variables to match your homepage's theme --- */
@@ -9,38 +9,74 @@
     --dark-color: #2c3e50;    /* The dark slate blue */
     --card-background: #ffffff;
     --light-text-color: #ffffff;
+    --text-color: #333;
 }
+
+/* 
+=================================================
+  NEW: STYLES FOR THE PAGE HEADER
+=================================================
+*/
+
+.page-header {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.page-header .page-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+
+/* 
+=================================================
+  STYLES FOR PAGE NAVIGATION BUTTONS
+=================================================
+*/
 
 /* --- The container for the buttons --- */
 .page-navigation {
     display: flex;
-    justify-content: space-between; /* Pushes buttons to opposite ends */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows buttons to stack on small screens */
-    gap: 20px; /* Adds space between buttons if they wrap */
-    max-width: 800px; /* Keeps it neat on very wide screens */
-    margin: 60px auto 40px auto; /* Centers the container and adds space */
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 800px;
+    margin: 60px auto 40px auto;
     padding: 20px;
-    border-top: 1px solid #e0e0e0; /* A subtle separator line */
+    border-top: 1px solid #e0e0e0;
 }
 
 /* --- Base style for both buttons --- */
 .nav-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
     padding: 12px 25px;
-    font-family: 'Poppins', sans-serif; /* Use the same modern font */
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 50px; /* Pill-shaped buttons */
+    border-radius: 50px;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* --- Style for the "Home" button (outline style) --- */
+/* --- Style for the "Home" button --- */
 .nav-button.home {
     color: var(--primary-color);
     background-color: transparent;
@@ -54,7 +90,7 @@
     box-shadow: 0 4px 15px rgba(41, 128, 185, 0.2);
 }
 
-/* --- Style for the "Next Page" button (filled style) --- */
+/* --- Style for the "Next Page" button --- */
 .nav-button.next {
     color: var(--light-text-color);
     background-color: var(--primary-color);
@@ -68,15 +104,22 @@
     box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
 }
 
-/* --- Responsive adjustments for smaller screens --- */
+/* --- Responsive adjustments --- */
 @media (max-width: 600px) {
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    .page-header .page-subtitle {
+        font-size: 1.2rem;
+    }
+
     .page-navigation {
-        justify-content: center; /* Center the buttons when they stack */
+        justify-content: center;
     }
 
     .nav-button {
-        width: 100%; /* Make buttons full-width */
-        justify-content: center; /* Center text/icon inside the button */
+        width: 100%;
+        justify-content: center;
         padding: 15px 20px;
     }
 }
