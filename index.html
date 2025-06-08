@@ -3,9 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>GCE A/L Web Development Past Paper Answers</title>
+    <meta name="description" content="A dynamic and professional resource for GCE A/L Web Development past paper answers from 2011 to 2024. Ace your exams with our comprehensive guides.">
+    <meta name="keywords" content="GCE AL, Web Development, ICT, Past Papers, Answers, Sri Lanka, Hasindu Ohasa, Exam Preparation, HTML, CSS, JavaScript">
+    <meta name="author" content="Hasindu Ohasa">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* 1. Global Resets & Variables */
+        :root {
+            --primary-color: #2980b9; /* A professional, toned-down blue */
+            --dark-color: #2c3e50;    /* The classic dark slate blue */
+            --background-color: #f8f9fa; /* Very Light Gray */
+            --card-background: #ffffff;
+            --text-color: #333;
+            --light-text-color: #f0f0f0;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            --hover-shadow: 0 10px 30px rgba(44, 62, 80, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* 2. Typography & General Styling */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+            overflow-x: hidden;
+        }
+
+        /* 3. Header */
+        .main-header {
+            background-color: transparent;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .main-header.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+        .main-header .container { display: flex; justify-content: center; align-items: center; }
+        .main-header h1 { color: var(--dark-color); font-size: 1.6rem; }
+
+        /* 4. Hero Section & Typing Animation */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: #fff;
+            text-align: center;
+            padding: 180px 20px 120px 20px;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            min-height: 4.8rem; /* Prevents layout shift during typing */
+        }
+        
+        /* Blinking cursor for typing animation */
+        #typing-text::after {
+            content: '|';
+            display: inline-block;
+            animation: blink 0.7s infinite;
+            font-weight: 300;
+            color: var(--light-text-color);
+            opacity: 1;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #fff;
+            color: var(--dark-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* 5. Past Papers Grid Section */
+        #papers .section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; }
+        .papers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; }
+
+        .paper-card {
+            background-color: var(--card-background);
+            border: 1px solid #eee;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .paper-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: var(--hover-shadow); border-color: var(--primary-color); }
+        .paper-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; }
+        .paper-card .year { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 600; color: var(--dark-color); margin-bottom: 10px; }
+        .paper-card .cta-text { font-weight: 500; color: #555; font-size: 1rem; }
+
+        /* 6. About Section */
+        .about-section { background-color: var(--card-background); }
+        .about-section .container { max-width: 800px; text-align: center; }
+        .about-section h2 { margin-bottom: 20px; font-size: 2.5rem; }
+        .about-section p { font-size: 1.1rem; margin-bottom: 15px; color: #555; }
+
+        /* 7. Footer */
+        .main-footer { background-color: var(--dark-color); color: var(--light-text-color); text-align: center; padding: 40px 0; margin-top: 40px; }
+        .main-footer p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 15px; }
+
+        /* 8. Scroll Animation Classes */
+        [data-scroll] { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        [data-scroll].revealed { opacity: 1; transform: translateY(0); }
+        
+        /* 9. Back to Top Button */
+        #toTopBtn { position: fixed; bottom: 20px; right: 20px; background-color: var(--primary-color); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1001; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s; }
+        #toTopBtn.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        #toTopBtn:hover { background-color: var(--dark-color); }
+
+        /* 10. Responsive Media Queries */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.8rem; min-height: 3.4rem; }
+            .hero p { font-size: 1.1rem; }
+            section { padding: 60px 0; }
+        }
+        
+        @media (max-width: 480px) {
+            .main-header h1 { font-size: 1.3rem; }
+            .hero h2 { font-size: 2.2rem; min-height: 2.7rem; }
+            .hero { padding-top: 120px; }
+            .papers-grid { grid-template-columns: 1fr; gap: 25px; }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <h1><i class="fas fa-code"></i> GCE A/L Web Dev Answers</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 id="typing-text"></h2> <!-- Target for the typing animation -->
+                <p data-scroll>Explore comprehensive answers for GCE A/L Web Development past papers. Your ultimate guide to achieving a top grade, now with a dynamic and interactive experience.</p>
+                <a href="#papers" class="cta-button" data-scroll>View Papers</a>
+            </div>
+        </section>
+
+        <section id="papers">
+            <div class="container">
+                <h2 class="section-title" data-scroll>Select a Year</h2>
+                <div class="papers-grid">
+                    <a href="2011.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2011</div><p class="cta-text">View Answers</p></a>
+                    <a href="2012.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2012</div><p class="cta-text">View Answers</p></a>
+                    <a href="2013.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2013</div><p class="cta-text">View Answers</p></a>
+                    <a href="2014.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2014</div><p class="cta-text">View Answers</p></a>
+                    <a href="2015.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2015</div><p class="cta-text">View Answers</p></a>
+                    <a href="2016.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2016</div><p class="cta-text">View Answers</p></a>
+                    <a href="2017.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2017</div><p class="cta-text">View Answers</p></a>
+                    <a href="2018.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2018</div><p class="cta-text">View Answers</p></a>
+                    <a href="2019.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2019</div><p class="cta-text">View Answers</p></a>
+                    <a href="2020.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2020</div><p class="cta-text">View Answers</p></a>
+                    <a href="2021.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2021</div><p class="cta-text">View Answers</p></a>
+                    <a href="2022.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2022</div><p class="cta-text">View Answers</p></a>
+                    <a href="2023.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2023</div><p class="cta-text">View Answers</p></a>
+                    <a href="2024.html" class="paper-card" data-scroll><i class="fas fa-file-alt"></i><div class="year">2024</div><p class="cta-text">View Answers</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container" data-scroll>
+                <h2>Why Use This Resource?</h2>
+                <p>Practicing with past papers is the most effective way to prepare. This site provides clear, well-structured answers to help you understand the marking scheme, manage your time effectively, and identify common question patterns.</p>
+                <p>Every solution is crafted to be easy to follow, ensuring you grasp the core concepts of web development required by the syllabus.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 GCE A/L Web Development Answers. All Rights Reserved.</p>
+            <p>Copyrights by Hasindu Ohasa</p>
+        </div>
+    </footer>
+
+    <button id="toTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Internal JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Typing Animation (Faster Speed) ---
+            const typingElement = document.getElementById('typing-text');
+            const sentences = [
+                "Master Your Exams.",
+                "Ace Your Web Dev Paper.",
+                "Learn with Confidence.",
+                "Prepare for Success."
+            ];
+            let sentenceIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeEffect() {
+                const currentSentence = sentences[sentenceIndex];
+                let displayedText = '';
+
+                if (isDeleting) {
+                    displayedText = currentSentence.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    displayedText = currentSentence.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                typingElement.textContent = displayedText;
+
+                if (!isDeleting && charIndex === currentSentence.length) {
+                    // Shorter pause after typing
+                    setTimeout(() => { isDeleting = true; }, 1500); 
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                    // Pause before typing next sentence
+                    setTimeout(typeEffect, 500); 
+                    return;
+                }
+                
+                // Increased speed: 100ms for typing, 50ms for deleting
+                const typingSpeed = isDeleting ? 50 : 100;
+                setTimeout(typeEffect, typingSpeed);
+            }
+            typeEffect();
+
+            // --- Header Style Change on Scroll ---
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // --- Back to Top Button Logic ---
+            const toTopBtn = document.getElementById('toTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    toTopBtn.classList.add('show');
+                } else {
+                    toTopBtn.classList.remove('show');
+                }
+            });
+            toTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // --- Scroll-Reveal Animation ---
+            const scrollElements = document.querySelectorAll('[data-scroll]');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
 </html>
